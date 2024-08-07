@@ -2,7 +2,7 @@
 
 **Description:**
 
-Notes is a graphical user interface (GUI) application built with **ttkbootstrap** for managing and handling files. The project is named **'Notes'** because the idea originated from jotting down ideas on a sticky note.
+Notes is a graphical user interface (GUI) application built with **ttkbootstrap** for managing and handling files. The project is named **'Notes'** because the idea originated from jotting down project ideas on a sticky note.
 
 **Current Status:**
 
