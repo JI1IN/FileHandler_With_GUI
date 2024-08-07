@@ -11,7 +11,8 @@ In the future I plan to add additional features for user experience, different c
 
 *UPDATE 07.08.2024:*
 
-Enhanced the design of the GUI using ttkbootstrap, planning on adding a combobox (I have no idea though how I should implement that).
+- Enhanced the design of the GUI using ttkbootstrap, planning on adding a combobox (I have no idea though how I should implement that).
+- Created an executable of the application.
 
 Contributions, feedback, and suggestions are as always welcome as the project evolves.
 
