@@ -16,6 +16,7 @@ root.iconbitmap('assets/imgs/299111_note_sticky_icon.ico')
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 root.geometry(f"{screen_width}x{screen_height}+0+0")
+root.config(background='#F5F5DC')
 root.resizable(True, True)
 windll.shcore.SetProcessDpiAwareness(1)
 # ---GUI CONFIGS---
@@ -30,13 +31,13 @@ root.iconphoto(True, icon)
 root.grid_columnconfigure(0, weight=100)
 root.grid_columnconfigure(3, weight=100)
 
-label_title = tk.Label(root, text='Notes', font=('Courier New BOLD', 25))
+label_title = tk.Label(root, text='Notes', font=('Segoe UI BOLD', 25), background='#F5F5DC')
 label_title.grid(column=0, row=0, columnspan=4, pady=(100, 0))
 
-message = ttk.Label(root, text='Create, Delete, Edit Notes; Simplified', font=('Courier New', 16))
+message = ttk.Label(root, text='Create, Delete, Edit Notes; Simplified', font=('Segoe UI', 16), background="#F5F5DC")
 message.grid(column=0, row=1, columnspan=4, pady=(0, 20))
 
-message_text = tk.Text(root, font=('Courier New', 13), height=20, width=80)
+message_text = tk.Text(root, font=('Segoe UI', 13), height=20, width=80)
 message_text.grid(row=2, column=0, columnspan=4, padx=(10, 10), pady=(10, 10), sticky="ew")
 
 button_create = ttk.Button(root, text="Create new File", command=Tkinter_FileHandler.create_file)
@@ -50,5 +51,6 @@ button_edit.grid(row=3, column=2, padx=10, pady=10, sticky=tk.E)
 
 button_read = ttk.Button(root, text="Read a File", command=lambda: Tkinter_FileHandler.read_file(message_text))
 button_read.grid(row=3, column=3, padx=10, pady=10, sticky=tk.W)
+
 
 root.mainloop()
