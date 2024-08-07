@@ -10,6 +10,7 @@ Please note (no pun intended) that this project is currently under development. 
 In the future I plan to add additional features for user experience, different colours, light and dark modes etc. I also plan on changing the GUI from Tkinter to something else but maybe I create a seperate repository for that.
 
 *UPDATE 07.08.2024:*
+
 Enhanced the design of the GUI using ttkbootstrap, planning on adding a combobox (I have no idea though how I should implement that).
 
 Contributions, feedback, and suggestions are as always welcome as the project evolves.
