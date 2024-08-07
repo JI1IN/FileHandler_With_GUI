@@ -20,7 +20,7 @@ def read_file(text_box):
 
 def save_file_after_confirmation(text_box):
     try:
-        content = text_box.get(1.0, tk.END).strip() 
+        content = text_box.get(1.0, tk.END).strip()
         if content:
             filename = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Text files", "*.txt"),
                                                                                         ("All files", "*.*")])
@@ -36,17 +36,17 @@ def save_file_after_confirmation(text_box):
 
 def write_file(text_box, root):
     text_to_append = "Enter the text you want to append to the file: "
-   
+
     text_box.delete(1.0, tk.END)
     text_box.insert('end', text_to_append)
 
     def on_confirm():
         text_box.delete(1.0, "1.{}".format(len(text_to_append)))
         save_file_after_confirmation(text_box)
-        confirm_button.pack_forget() 
+        confirm_button.grid_forget()
 
-    confirm_button = ttk.Button(root, text="Confirm and Save", command=on_confirm)
-    confirm_button.grid(row=4, column=3, padx=10, pady=10, sticky=tk.W)
+    confirm_button = ttk.Button(root, text="Confirm & Save", command=on_confirm)
+    confirm_button.grid(row=4, column=0, padx=10, pady=10, sticky=tk.E)
 
 
 def delete_file():
