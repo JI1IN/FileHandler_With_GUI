@@ -2,20 +2,23 @@
 
 **Description:**
 
-Notes is a graphical user interface (GUI) application built with Tkinter for managing and handling files. The project is named **'Notes'** because the idea originated from jotting down ideas on a sticky note.
+Notes is a graphical user interface (GUI) application built with **ttkbootstrap** for managing and handling files. The project is named **'Notes'** because the idea originated from jotting down ideas on a sticky note.
 
 **Current Status:**
 
 Please note (no pun intended) that this project is currently under development. While the core features are functional, there are still ongoing improvements and updates.
-In the future I plan to add additional features for user experience, different colours, light and dark modes etc. I also plan on changing the GUI from Tkinter to PyQt5 but maybe I create a seperate repository for that.
+In the future I plan to add additional features for user experience, different colours, light and dark modes etc. I also plan on changing the GUI from Tkinter to something else but maybe I create a seperate repository for that.
+
+*UPDATE 07.08.2024:*
+Enhanced the design of the GUI using ttkbootstrap, planning on adding a combobox (I have no idea though how I should implement that).
 
 Contributions, feedback, and suggestions are as always welcome as the project evolves.
 
 **Features:**
 
 - Intuitive GUI for file management
-- Basic file operations such as open, save, and edit
-- Customizable settings and options
+- Basic file operations such as open, save, and edit (append to file rather than edit)
+- Customizable settings and options (will implement in the future, is not included yet)
 
 **Installation:**
 
