@@ -2,12 +2,13 @@ import ctypes
 import ttkbootstrap as ttkb
 from PIL import Image, ImageTk
 import Tkinter_FileHandler
+from Settings import open_settings
+
 
 myappid = u'mycompany.myproduct.subproduct.version'
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 
-
-# ---GUI CONFIGS---
+# --- Main GUI CONFIGS ---
 root = ttkb.Window(themename="darkly")
 root.geometry('500x500')
 root.title('NOTES')
@@ -16,17 +17,17 @@ screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 root.geometry(f"{screen_width}x{screen_height}+0+0")
 root.resizable(True, True)
-# ---GUI CONFIGS---
 
 icon = Image.open("Z:/1918j/Projects/Notes/Notes/assets/imgs/299111_note_sticky_icon.ico")
 icon = ImageTk.PhotoImage(icon)
-
-# Set the taskbar icon
 root.iconphoto(True, icon)
 
-# Configure grid to have all columns take equal space
 root.grid_columnconfigure(0, weight=100)
 root.grid_columnconfigure(3, weight=100)
+
+settings_button = ttkb.Button(root, text='THEMES ⛭', style="success.Outline.TButton",
+                              command=lambda: open_settings(root))
+settings_button.grid(column=0, row=0, pady=(30, 0), padx=(30, 0), sticky="nw")
 
 label_title = ttkb.Label(root, text='Notes', bootstyle="success")
 label_title.grid(column=0, row=0, columnspan=4, pady=(100, 0))
@@ -36,20 +37,16 @@ message = ttkb.Label(root, text='Create, Delete, Edit Notes; Simplified')
 message.grid(column=0, row=1, columnspan=4, pady=(0, 20))
 message.configure(font=("Courier New", 16))
 
-# Frame to hold the text widget and scrollbar together
 frame_text = ttkb.Frame(root)
 frame_text.grid(row=2, column=0, columnspan=4, padx=(10, 10), pady=(10, 10), sticky="nsew")
 
-# Configure the grid inside the frame
 frame_text.grid_columnconfigure(0, weight=1)
 frame_text.grid_rowconfigure(0, weight=1)
 
-# Text widget inside the frame
 message_text = ttkb.Text(frame_text, font=('Segoe UI', 13), height=20, width=80)
 message_text.grid(row=0, column=0, sticky="nsew")
 message_text.configure(font=("Courier New", 16), borderwidth=2)
 
-# Scrollbar inside the frame, on the right of the text
 scrollbar = ttkb.Scrollbar(frame_text, bootstyle="success", command=message_text.yview)
 scrollbar.grid(row=0, column=1, sticky="ns")
 
