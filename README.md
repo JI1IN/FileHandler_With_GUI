@@ -15,7 +15,7 @@ In the future I plan to add additional features for user experience, different c
 - Created an executable of the application.
 *UPDATE 08.08.2024:*
 
-- Changed the theme of the app, added a scrollbar for the display field, enhanced design, deleted the executable from the repository because I will create one when the project is done (which of right now, it is not).
+- Changed the theme and themes settings (for customizable themes, though currently there are only ttkb themes) of the app, added a scrollbar for the display field, enhanced design, deleted the executable from the repository because I will create one when the project is done (which of right now, it is not). 
 
 Contributions, feedback, and suggestions are as always welcome as the project evolves.
 
