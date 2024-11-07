@@ -30,7 +30,7 @@ Contributions, feedback, and suggestions are as always welcome as the project ev
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/FileHandler_With_GUI.git
+    git clone https://github.com/JI1IN/FileHandler_With_GUI.git
     ```
 2. Navigate to the project directory:
     ```bash
