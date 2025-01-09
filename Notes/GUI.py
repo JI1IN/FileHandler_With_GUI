@@ -5,20 +5,20 @@ import Tkinter_FileHandler
 from Settings import open_settings
 
 
-myappid = u'mycompany.myproduct.subproduct.version'
+myappid = u'Jason.Notes.version1.2'
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 
 # --- Main GUI CONFIGS ---
 root = ttkb.Window(themename="darkly")
 root.geometry('500x500')
 root.title('NOTES')
-root.iconbitmap('Z:/1918j/Projects/Notes/Notes/assets/imgs/299111_note_sticky_icon.ico')
+root.iconbitmap('../Notes/assets/imgs/299111_note_sticky_icon.ico')
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 root.geometry(f"{screen_width}x{screen_height}+0+0")
 root.resizable(True, True)
 
-icon = Image.open("Z:/1918j/Projects/Notes/Notes/assets/imgs/299111_note_sticky_icon.ico")
+icon = Image.open("../Notes/assets/imgs/299111_note_sticky_icon.ico")
 icon = ImageTk.PhotoImage(icon)
 root.iconphoto(True, icon)
 
